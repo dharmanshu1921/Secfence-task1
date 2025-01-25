@@ -58,4 +58,4 @@ This project features an AI-powered chatbot with message queuing and a custom we
    - Connects to backend on port 8765
 
 ## Demo
-[View Project Demo on YouTube]([https://youtube.com/your-demo-link](https://youtu.be/PDDxdRiv6Nk))
+[View Project Demo on YouTube]([https://youtu.be/PDDxdRiv6Nk])
