@@ -1,4 +1,4 @@
-# AI Chatbot and Web Scraper Project
+# AI Chatbot and Web Scraper 
 
 ## Overview
 This project features an AI-powered chatbot with message queuing and a custom web scraper, demonstrating web communication and content extraction.
