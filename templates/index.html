@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with AI Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .chat-container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 600px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .messages {
+            margin-bottom: 20px;
+        }
+        .messages p {
+            padding: 5px;
+            margin: 0;
+        }
+        .user-message {
+            text-align: right;
+            color: #2a6eb6;
+        }
+        .bot-message {
+            text-align: left;
+            color: #d17400;
+        }
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .input-container input {
+            width: 80%;
+            padding: 10px;
+        }
+        .input-container button {
+            padding: 10px;
+            width: 15%;
+            background-color: #2a6eb6;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h2>Chat with AI Bot</h2>
+        
+        <div class="messages">
+            {% if user_input %}
+                <p class="user-message"><strong>You:</strong> {{ user_input }}</p>
+                <p class="bot-message"><strong>Bot:</strong> {{ bot_response }}</p>
+            {% elif message %}
+                <p class="bot-message">{{ message }}</p>
+            {% endif %}
+        </div>
+
+        <form action="/chat" method="POST">
+            <div class="input-container">
+                <input type="text" name="user_input" placeholder="Type your message..." required>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
